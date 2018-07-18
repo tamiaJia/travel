@@ -2,7 +2,7 @@
 	<div>
 		<div class="recommend-title">热销推荐</div>	
 		<ul>
-			<li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+			<li class="item border-bottom" v-for="item of list" :key="item.id">
 			 	<img class="item-img" :src="item.imgUrl" alt="" />
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -16,29 +16,8 @@
 <script>
 	export default{
 		name:'HomeRecommend',
-		data () {
-			return{
-				recommendList:[
-					{
-						id:'0001',
-						imgUrl:'http://img1.qunarzz.com/sight/p0/1803/9d/9d862d8166170089a3.img.jpg_200x200_8974965b.jpg',
-						title:'北京园博园',
-						desc:'繁花似锦的夏天正迎面而来，夏天是美好的，夏天是多姿多彩的，夏天的北京园博园绿意正浓、水韵灵动、色彩斑斓、美景如画，值得去探寻！'
-					},
-					{
-						id:'0002',
-						imgUrl:'http://img1.qunarzz.com/sight/p0/1803/9d/9d862d8166170089a3.img.jpg_200x200_8974965b.jpg',
-						title:'北京园博园',
-						desc:'繁花似锦的夏天正迎面而来，夏天是美好的，夏天是多姿多彩的，夏天的北京园博园绿意正浓、水韵灵动、色彩斑斓、美景如画，值得去探寻！'
-					},
-					{
-						id:'0003',
-						imgUrl:'http://img1.qunarzz.com/sight/p0/1803/9d/9d862d8166170089a3.img.jpg_200x200_8974965b.jpg',
-						title:'北京园博园',
-						desc:'繁花似锦的夏天正迎面而来，夏天是美好的，夏天是多姿多彩的，夏天的北京园博园绿意正浓、水韵灵动、色彩斑斓、美景如画，值得去探寻！'
-					}
-				]
-			}
+		props: {
+			list: Array
 		}
 	}
 </script>
